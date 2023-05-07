@@ -1,10 +1,11 @@
 import express from "express";
 import path from "path";
-import User from "../models/userModel.js";
+import User from "../model/userModel.js";
 import { upload } from "../multer.js";
 import { ErrorHandler } from "../utils/ErrorHandler.js";
 
-export default router = express.Router();
+const router = express.Router();
+export default router;
 
 router.post("/create-user", upload.single("file"), async (req, res) => {
   const { name, email, password } = req.body;
